@@ -1,0 +1,2 @@
+[![<chrisramakers>](https://circleci.com/gh/chrisramakers/training-typescript-webpack.svg?style=shield)](https://app.circleci.com/pipelines/github/chrisramakers/training-typescript-webpack)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=chrisramakers_training-typescript-webpack&metric=alert_status)](https://sonarcloud.io/dashboard?id=chrisramakers_training-typescript-webpack)
