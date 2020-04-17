@@ -1,4 +1,6 @@
-import Calculator from './calculator';
+import Calculator from "./calculator";
 
-var calc = new Calculator();
-console.log(calc.add(1,2));
+const calc = new Calculator();
+
+// tslint:disable-next-line: no-console
+console.log(calc.add(1, 2));

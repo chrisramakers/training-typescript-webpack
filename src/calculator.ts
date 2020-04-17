@@ -1,5 +1,5 @@
 export default class Calculator {
-    add = function(a:number, b:number) {
-        return a + b;
-    }
+  public add = (a: number, b: number): number => {
+    return a + b;
+  };
 }
