@@ -5,4 +5,5 @@ jobs:
             - image: circleci/node:12.13
         steps:
             - checkout
-            - run: echo "hello world"
+            - run: npm install
+            - run: npm run test --coverage
