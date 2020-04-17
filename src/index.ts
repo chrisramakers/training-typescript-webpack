@@ -1,6 +1,6 @@
-import Calculator from "./calculator";
+import Calculator from './calculator'
 
-const calc = new Calculator();
+const calc = new Calculator()
 
 // tslint:disable-next-line: no-console
-alert(calc.add(1, 2));
+alert(calc.add(1, 2))
