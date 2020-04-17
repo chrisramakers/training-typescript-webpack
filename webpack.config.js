@@ -1,13 +1,17 @@
+var path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = {
+    mode: "development",
     entry: "./src/index.ts",
     output: {
-        filename: "./dist/bundle.js"
+        path: path.resolve(__dirname, 'dist'),
+        filename: "bundle.[contentHash].js"
     },
 
-    mode: "production",
-
-    // Enable sourcemaps for debugging webpack's output.
-    devtool: "source-map",
+    plugins: [
+        new CleanWebpackPlugin()
+    ],
 
     resolve: {
         // Add '.ts' as resolvable extensions.
@@ -21,15 +25,9 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     {
-                        loader: "awesome-typescript-loader"
+                        loader: "ts-loader"
                     }
                 ]
-            },
-            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-            {
-                enforce: "pre",
-                test: /\.js$/,
-                loader: "source-map-loader"
             }
         ]
     }

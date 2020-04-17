@@ -1,2 +1,4 @@
-const add = function (a:number, b:number) { return a + b };
-console.log(add(1,2));
+import Calculator from './calculator';
+
+var calc = new Calculator();
+console.log(calc.add(1,2));
