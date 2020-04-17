@@ -5,6 +5,10 @@ describe('Calculator', () => {
         const calc = new Calculator()
         expect(calc.add(2, 4)).toBe(6)
     })
+    it('Should add more than two numbers', () => {
+        const calc = new Calculator()
+        expect(calc.add(1, 2, 3)).toBe(6)
+    })
 
     it('Should subtract two numbers', () => {
         const calc = new Calculator()
