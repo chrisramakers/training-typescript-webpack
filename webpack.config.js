@@ -1,21 +1,25 @@
-var path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+var path = require('path')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-    mode: "development",
-    entry: "./src/index.ts",
+    mode: 'development',
+    entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: "bundle.[contentHash].js"
+        filename: 'bundle.[contentHash].js',
     },
 
     plugins: [
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: 'src/template.html',
+        }),
     ],
 
     resolve: {
         // Add '.ts' as resolvable extensions.
-        extensions: [".ts", ".js"]
+        extensions: ['.ts', '.js'],
     },
 
     module: {
@@ -25,10 +29,10 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     {
-                        loader: "ts-loader"
-                    }
-                ]
-            }
-        ]
-    }
-};
+                        loader: 'ts-loader',
+                    },
+                ],
+            },
+        ],
+    },
+}
