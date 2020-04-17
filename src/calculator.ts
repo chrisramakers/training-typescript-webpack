@@ -9,7 +9,7 @@ export default class Calculator {
     public sub(a: number, b: number): number {
         return a - b
     }
-    public add(a: number, b: number): number {
-        return a + b
+    public add(...n: number[]): number {
+        return n.reduce((prev, value) => prev + value)
     }
 }

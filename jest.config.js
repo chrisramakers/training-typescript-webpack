@@ -7,6 +7,9 @@ module.exports = {
     transform: {
         '^.+\\.(ts|tsx)$': 'ts-jest',
     },
+    collectCoverage: true,
+    coverageReporters: ['clover'],
+    coverageDirectory: 'test-coverage',
     coverageThreshold: {
         global: {
             branches: 80,
@@ -15,5 +18,4 @@ module.exports = {
             statements: 80,
         },
     },
-    coverageReporters: ['json', 'lcov', 'text', 'clover'],
 }
