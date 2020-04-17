@@ -1,24 +1,26 @@
 {
-  "name": "tswp-training",
-  "version": "1.0.0",
-  "description": "TypeScript/Webpack training",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack --config webpack.config.js",
-    "lint": "tslint -c tslint.json 'src/**/*.ts'"
-  },
-  "keywords": [],
-  "author": "Chris Ramakers",
-  "license": "ISC",
-  "devDependencies": {
-    "clean-webpack-plugin": "^3.0.0",
-    "html-webpack-plugin": "^4.2.0",
-    "source-map-loader": "^0.2.4",
-    "ts-loader": "^7.0.0",
-    "tslint": "^6.1.1",
-    "typescript": "^3.8.3",
-    "typescript-tslint-plugin": "^0.5.5",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
-  }
+    "name": "tswp-training",
+    "version": "1.0.0",
+    "description": "TypeScript/Webpack training",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server --config webpack.config.js",
+        "build": "webpack --config webpack.config.js",
+        "lint": "tslint -c tslint.json 'src/**/*.ts'"
+    },
+    "keywords": [],
+    "author": "Chris Ramakers",
+    "license": "ISC",
+    "devDependencies": {
+        "clean-webpack-plugin": "^3.0.0",
+        "html-webpack-plugin": "^4.2.0",
+        "source-map-loader": "^0.2.4",
+        "ts-loader": "^7.0.0",
+        "tslint": "^6.1.1",
+        "typescript": "^3.8.3",
+        "typescript-tslint-plugin": "^0.5.5",
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.10.3"
+    }
 }
